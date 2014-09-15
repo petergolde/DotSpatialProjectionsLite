@@ -120,20 +120,7 @@
     <Compile Include="DatumType.cs" />
     <Compile Include="Descriptor.cs" />
     <Compile Include="GeocentricGeodetic.cs" />
-    <Compile Include="GeographicCategories\Africa.cs" />
-    <Compile Include="GeographicCategories\Antarctica.cs" />
-    <Compile Include="GeographicCategories\Asia.cs" />
-    <Compile Include="GeographicCategories\Australia.cs" />
-    <Compile Include="GeographicCategories\CountySystems.cs" />
-    <Compile Include="GeographicCategories\Europe.cs" />
-    <Compile Include="GeographicCategories\NorthAmerica.cs" />
-    <Compile Include="GeographicCategories\Oceans.cs" />
-    <Compile Include="GeographicCategories\SolarSystem.cs" />
-    <Compile Include="GeographicCategories\SouthAmerica.cs" />
-    <Compile Include="GeographicCategories\SpheroidBased.cs" />
-    <Compile Include="GeographicCategories\World.cs" />
     <Compile Include="GeographicInfo.cs" />
-    <Compile Include="GeographicSystems.cs" />
     <Compile Include="GridShift.cs" />
     <Compile Include="IEsriString.cs" />
     <Compile Include="IProjectionCategory.cs" />
@@ -185,7 +172,6 @@
     <Compile Include="ProjectedCategories\Wisconsin.cs" />
     <Compile Include="ProjectedCategories\World.cs" />
     <Compile Include="ProjectedCategories\WorldSpheroid.cs" />
-    <Compile Include="ProjectedSystems.cs" />
     <Compile Include="ProjectionException.cs" />
     <Compile Include="ProjectionInfo.cs" />
     <Compile Include="ProjectionInvalidEsriFormatException.cs" />
@@ -371,6 +357,7 @@
   <ItemGroup>
     <None Include="AuthorityCodes\Readme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

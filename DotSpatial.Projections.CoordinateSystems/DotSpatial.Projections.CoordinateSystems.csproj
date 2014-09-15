@@ -7,7 +7,7 @@
     <ProjectGuid>{5EEDF2E9-2490-4C43-ADB1-D4986DE74E73}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DotSpatial.Projections.CoordinateSystems</RootNamespace>
+    <RootNamespace>DotSpatial.Projections</RootNamespace>
     <AssemblyName>DotSpatial.Projections.CoordinateSystems</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,7 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeographicCategories\Africa.cs" />
+    <Compile Include="GeographicCategories\Antarctica.cs" />
+    <Compile Include="GeographicCategories\Asia.cs" />
+    <Compile Include="GeographicCategories\Australia.cs" />
+    <Compile Include="GeographicCategories\CountySystems.cs" />
+    <Compile Include="GeographicCategories\Europe.cs" />
+    <Compile Include="GeographicCategories\NorthAmerica.cs" />
+    <Compile Include="GeographicCategories\Oceans.cs" />
+    <Compile Include="GeographicCategories\SolarSystem.cs" />
+    <Compile Include="GeographicCategories\SouthAmerica.cs" />
+    <Compile Include="GeographicCategories\SpheroidBased.cs" />
+    <Compile Include="GeographicCategories\World.cs" />
+    <Compile Include="GeographicSystems.cs" />
     <Compile Include="KnownCoordinateSystems.cs" />
+    <Compile Include="ProjectedSystems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +63,7 @@
       <Name>DotSpatial.Projections</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
