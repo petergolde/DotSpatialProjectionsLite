@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorityCodes\AuthorityCodeHandler.cs" />
+    <Compile Include="ProjectionInfoLookup.cs" />
     <Compile Include="GeographicCategories\Africa.cs" />
     <Compile Include="GeographicCategories\Antarctica.cs" />
     <Compile Include="GeographicCategories\Asia.cs" />
@@ -102,6 +104,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="AuthorityCodes\AuthorityCodeToProj4.ds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AuthorityCodes\AuthorityCodeToProj4.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AuthorityCodes\Readme.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
