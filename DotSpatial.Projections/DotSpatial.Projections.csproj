@@ -229,43 +229,9 @@
     <None Include="package.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Nad\alaska.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\conus.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\FL.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\hawaii.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\MD.lla" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Nad\null.lla" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Nad\prvi.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\stgeorge.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\stlrnc.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\stpaul.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\TN.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\WI.lla" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Nad\WO.lla" />
     <EmbeddedResource Include="ProjectionMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProjectionMessages.Designer.cs</LastGenOutput>
@@ -278,8 +244,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Nad\ntv1_can.dat" />
-    <EmbeddedResource Include="Nad\ntv2_0.GSB" />
     <EmbeddedResource Include="XML\gcs.csv" />
     <EmbeddedResource Include="XML\pcs.csv" />
   </ItemGroup>
@@ -311,10 +275,7 @@
   <ItemGroup>
     <None Include="DotSpatial.Projections.4.0.snk" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AuthorityCodes\" />
-    <Folder Include="ProjectedCategories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
