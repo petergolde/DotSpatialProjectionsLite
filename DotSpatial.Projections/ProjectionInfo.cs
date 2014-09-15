@@ -656,7 +656,7 @@ namespace DotSpatial.Projections
             //special case for Krovak Projection
             //todo use a lookup table instead of hard coding the projection here
             if (esriString.Contains("Krovak"))
-                return KnownCoordinateSystems.Projected.NationalGrids.SJTSKKrovakEastNorth;
+                return SpecialCoordinateSystems.SJTSKKrovakEastNorth;
 
             var info = new ProjectionInfo();
             info.NoDefs = true;
@@ -1300,7 +1300,7 @@ namespace DotSpatial.Projections
                 if (AuxiliarySphereType == AuxiliarySphereType.SemimajorAxis)
                 {
                     // added by Jiri to properly re-initialize the 'web mercator auxiliary sphere' transform
-                    Transform = KnownCoordinateSystems.Projected.World.WebMercator.Transform;
+                    Transform = SpecialCoordinateSystems.WebMercator.Transform;
                 }
                 else if (AuxiliarySphereType == AuxiliarySphereType.SemiminorAxis)
                 {
@@ -1350,5 +1350,34 @@ namespace DotSpatial.Projections
         }
 
         #endregion
+    }
+
+    internal static class SpecialCoordinateSystems
+    {
+        public static readonly ProjectionInfo SJTSKKrovakEastNorth;
+        public static readonly ProjectionInfo WebMercator;
+
+        static SpecialCoordinateSystems()
+        {
+            SJTSKKrovakEastNorth = ProjectionInfo.FromProj4String("+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +units=m +towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56 +no_defs ");
+            SJTSKKrovakEastNorth.Name = "S-JTSK_Krovak_East_North";
+            SJTSKKrovakEastNorth.GeographicInfo.Name = "GCS_S_JTSK";
+            SJTSKKrovakEastNorth.GeographicInfo.Datum.Name = "D_S_JTSK";
+
+            WebMercator = ProjectionInfo.FromProj4String("+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +no_defs ");
+            WebMercator.Transform = new MercatorAuxiliarySphere();
+            WebMercator.ScaleFactor = 1;
+            WebMercator.AuxiliarySphereType = AuxiliarySphereType.SemimajorAxis;
+            WebMercator.GeographicInfo.Datum.Spheroid = new Spheroid(WebMercator.GeographicInfo.Datum.Spheroid.EquatorialRadius);
+            WebMercator.Transform.Init(WebMercator);
+            //ITransform originalTransform = WebMercator.Transform;
+            //WebMercator.GeographicInfo.Datum.DatumType = DatumType.WGS84; //web mercator has a WGS84 datum type
+            //WebMercator.Transform = originalTransform; //reset the transform
+
+            WebMercator.Name = "WGS_1984_Web_Mercator_Auxiliary_Sphere";
+            WebMercator.GeographicInfo.Name = "GCS_WGS_1984";
+            WebMercator.GeographicInfo.Datum.Name = "D_WGS_1984";
+
+        }
     }
 }

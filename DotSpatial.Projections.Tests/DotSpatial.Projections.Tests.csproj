@@ -184,6 +184,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DotSpatial.Projections.CoordinateSystems\DotSpatial.Projections.CoordinateSystems.csproj">
+      <Project>{5eedf2e9-2490-4c43-adb1-d4986de74e73}</Project>
+      <Name>DotSpatial.Projections.CoordinateSystems</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DotSpatial.Projections\DotSpatial.Projections.csproj">
       <Project>{D286DF06-21FA-40BE-B384-6ACA509AC98C}</Project>
       <Name>DotSpatial.Projections</Name>

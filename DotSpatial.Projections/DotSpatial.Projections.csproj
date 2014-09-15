@@ -138,7 +138,6 @@
     <Compile Include="IEsriString.cs" />
     <Compile Include="IProjectionCategory.cs" />
     <Compile Include="IReproject.cs" />
-    <Compile Include="KnownCoordinateSystems.cs" />
     <Compile Include="LinearUnit.cs" />
     <Compile Include="Meridian.cs" />
     <Compile Include="MeridionalDistance.cs" />
